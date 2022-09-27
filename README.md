@@ -1,2 +1,2 @@
-# Programmers-Algorithm
-Solving algorithm problems in Programmers.
+# Algorithm
+Solving algorithm problems.
