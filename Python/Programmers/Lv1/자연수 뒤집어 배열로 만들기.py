@@ -4,5 +4,6 @@ def solution(n):
     answer = []
     str_n=str(n)
     for i in str_n:
-        answer.insert(0,int(i))
+        answer.append(int(i))
+    answer.reverse()
     return answer
