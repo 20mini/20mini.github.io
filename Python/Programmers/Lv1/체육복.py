@@ -1,7 +1,7 @@
 #https://school.programmers.co.kr/learn/courses/30/lessons/42862
 
 def solution(n, lost, reserve):
-    clothes=[1]*(n+2) # 1번부터 n번까지의 학생
+    clothes=[1]*(n+2) # 1번부터 n번까지의 학생이 가진 옷의 수
     # 인덱스 0은 1번 학생의 앞번호 확인 시, 인덱스 n+1은 n번 학생의 뒷번호 확인 시 오류 방지를 위해 생성
     clothes[0], clothes[n+1] = 0, 0 # 0번과 n+1번 학생은 없으므로
     for i in reserve: clothes[i]=2 
