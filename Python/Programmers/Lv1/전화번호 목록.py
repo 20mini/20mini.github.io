@@ -1,12 +1,12 @@
 #https://school.programmers.co.kr/learn/courses/30/lessons/42577
  
 def solution(phone_book):
-    my_set= set()
+    prefix_set= set() # 접두어들의 집합
     for i in phone_book:
         for j in range(1,len(i)):
-            my_set.add(i[:j])
+            prefix_set.add(i[:j]) # 접두어들을 추가해준다.
     for i in phone_book:
-        if i in my_set:
+        if i in prefix_set: # 특정 전화번호와 다른 전화번호의 접두어가 같을 경우
             return False
     return True
 
