@@ -1,3 +1,5 @@
+#https://school.programmers.co.kr/learn/courses/30/lessons/42577
+ 
 def solution(phone_book):
     my_set= set()
     for i in phone_book:
