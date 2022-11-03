@@ -2,7 +2,7 @@
 
 def solution(clothes):
     answer=1
-    clothes_dict={} # (의상의 종류:의상의 개수+1(아무것도 안 입는 경우))
+    clothes_dict={} # (의상의 종류:해당 종류의 의상의 개수+1(아무것도 안 입는 경우))
     for i in clothes:
         if i[1] in clothes_dict:
             clothes_dict[i[1]]+=1
