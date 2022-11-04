@@ -1,9 +1,14 @@
 #https://school.programmers.co.kr/learn/courses/30/lessons/12909
 
 def solution(s):
-    cnt=0 # 열린 상태로 닫히지 않는 괄호의 개수
+    stack=[] # 열린 상태로 닫히지 않는 괄호가 들어 있는 스택
     for i in s:
-        cnt+=1 if i=='(' else -1
-        if cnt<0: return False # 열린 괄호보다 닫은 괄호의 개수가 더 많을 경우
-    if cnt==0: return True
-    return False
+        if i=='(':
+            stack.append(i) # 스택에 추가
+        elif len(stack)<=0: # 닫는 괄호가 열린 괄호보다 많을 경우
+            return False
+        else:
+            stack.pop()
+    if len(stack)>0: # 모든 문자를 순회했을 때 열린 상태로 닫히지 않은 괄호가 남아 있을 경우
+        return False
+    return True
